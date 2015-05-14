@@ -118,7 +118,7 @@ mysql=ARGUMENTS.get('mysql', 'no')
 if mysql=='yes':
     main_env.Append(mysql='yes')
     main_env.Append(CPPFLAGS=["-DMYSQL_DB"])
-    main_env.Append(LIBS=['mysqlclient'])
+    main_env.Append(LIBS=['mariadbclient'])
 else:
     main_env.Append(mysql='no')
 
